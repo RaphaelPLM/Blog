@@ -7,8 +7,8 @@ export default function PostCreate() {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post('http://localhost:8000/posts', {
-      title
+    await axios.post('http://localhost:4000/posts', {
+      title,
     });
 
     setTitle('');
@@ -22,7 +22,7 @@ export default function PostCreate() {
             Title
             <input
               value={title}
-              onChange={e => setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
               id='title'
               className='form-control'
             />
@@ -41,4 +41,4 @@ export default function PostCreate() {
       </form>
     </div>
   );
-};
+}
